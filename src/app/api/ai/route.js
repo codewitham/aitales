@@ -22,7 +22,7 @@ export async function POST(req) {
 
         return NextResponse.json({ story: generatedStory, message: prompt }, { status: 200 });
     } catch (error) {
-        console.error('Error generating story:', error.message);
+        console.error('Error generating story:', error);
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
     }
 }
