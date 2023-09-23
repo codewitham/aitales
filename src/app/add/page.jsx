@@ -37,6 +37,7 @@ const GenerateStory = () => {
                 setGeneratedStory(story);
             } else {
                 console.error('Failed to generate story');
+                alert("May be the api limit is crossed or it takes a lot of time to generate the story.")
             }
         } catch (error) {
             console.error('Error generating story:', error);

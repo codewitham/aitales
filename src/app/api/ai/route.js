@@ -23,6 +23,6 @@ export async function POST(req) {
         return NextResponse.json({ story: generatedStory, message: prompt }, { status: 200 });
     } catch (error) {
         console.error('Error generating story:', error);
-        return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+        return NextResponse.json({ message: 'openai api is not working.\n 1. the api limit is crossed.\n 2. It takes a lot of time to generate response.' }, { status: 500 });
     }
 }
